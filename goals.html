@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFit | Goals</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Press+Start+2P&display=swap');
+
+/* General */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #15172E;
+    color: #F5F5F5;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P';
+    color: #FFD166;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+header {
+    background-color: #656ca7;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #FFD166;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a:hover {
+    color: #FFD166;
+}
+
+/* Introduction */
+.welcome {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+
+/* Goal Sections */
+.goals-section {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.goals-section h2 {
+    font-size: 20px;
+}
+
+.goals-section p {
+    font-size: 22px;
+}
+
+/* Fitness Goal Cards */
+.goal-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.goal-card {
+    background-color: #15172E;
+    border: 3px solid #EF476F;
+    padding: 20px;
+    width: 250px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.goal-card:hover {
+    border-color: #FFD166;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Fitness Goal Form */
+.goal-form {
+    background-color: #15172E;
+    border: 3px solid #FFD166;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.goal-form label {
+    display: block;
+    color: #FFD166;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.goal-form input,
+.goal-form select,
+.goal-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #656ca7;
+    color: #F5F5F5;
+    border: 2px solid #FFD166;
+    font-family: 'Pixelify Sans';
+    font-size: 20px;
+}
+
+
+
+.goal-form button {
+    background-color: #EF476F;
+    color: #15172E;
+    border: 3px solid #FFD166;
+    padding: 15px;
+    margin-top: 20px;
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Weekly Checklist */
+.checklist {
+    background-color: #15172E;
+    border: 3px solid #06D6A0;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.checklist label {
+    display: block;
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.checklist input {
+    width: 20px;
+    height: 20px;
+    accent-color: #06D6A0;
+}
+
+/* Ending Section */
+.ending {
+    background-color: #656ca7;
+    border: 3px solid #EF476F;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.start-button {
+    display: inline-block;
+    background-color: #EF476F;
+    color: #15172E;
+    padding: 15px;
+    margin-top: 20px;
+    border: 3px solid #FFD166;
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+}
+
+.start-button:hover {
+    background-color: #FFD166;
+}
+
+/* Footer */
+footer {
+    background-color: #656ca7;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Large Screens: Display goal cards in rows */
+@media (min-width: 701px) {
+    .goal-container {
+        flex-direction: row;
+    }
+}
+
+/* Small Screens: Stack cards and adjust form */
+@media (max-width: 700px) {
+    .goal-container {
+        flex-direction: column;
+    }
+
+    .goal-card {
+        width: 100%;
+    }
+
+    .welcome {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .goals-section,
+    .ending {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .goal-form {
+        padding: 15px;
+    }
+
+    .goal-form button {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    h1, h2 {
+        font-size: 17px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
+    </style>
+</head>
+<body>
+
+<!-- Main Navigation -->
+<header>
+    <h1>CAMPUSFIT</h1>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="workouts.html">WORKOUTS</a>
+        <a href="nutrition.html">NUTRITION</a>
+        <a href="recovery.html">RECOVERY</a>
+        <a href="goals.html">GOALS</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- Introduction -->
+<section class="welcome">
+    <h1>SET YOUR FITNESS GOALS</h1>
+    <p>
+        Every fitness journey starts with a goal.
+        Choose what you want to achieve and
+        start building healthy habits today!
+    </p>
+</section>
+
+<!-- Fitness Goal Options -->
+<section class="goals-section">
+    <h2>WHAT'S YOUR GOAL?</h2>
+    <p>Here are some common fitness goals to work toward.</p>
+
+    <div class="goal-container">
+
+        <div class="goal-card">
+            <h3>BUILD MUSCLE</h3>
+            <p>
+                Increase strength and muscle size
+                through consistent training and nutrition.
+            </p>
+        </div>
+
+        <div class="goal-card">
+            <h3>IMPROVE ENDURANCE</h3>
+            <p>
+                Improve cardiovascular fitness through
+                running, cycling, walking, or sports.
+            </p>
+        </div>
+
+        <div class="goal-card">
+            <h3>GET STRONGER</h3>
+            <p>
+                Improve your performance in exercises
+                like squats, bench presses, and deadlifts.
+            </p>
+        </div>
+
+        <div class="goal-card">
+            <h3>STAY CONSISTENT</h3>
+            <p>
+                Build a regular workout schedule
+                that fits your college lifestyle.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Fitness Goal Form -->
+<section class="goals-section">
+    <h2>CREATE YOUR FITNESS GOAL</h2>
+    <p>Fill out the form below to plan your fitness journey.</p>
+
+    <form class="goal-form" action="#" method="get">
+
+        <label for="name">YOUR NAME:</label>
+        <input type="text" id="name" name="name"
+               placeholder="Enter your name" required>
+
+        <label for="fitness-goal">CHOOSE YOUR GOAL:</label>
+        <select id="fitness-goal" name="fitness-goal" required>
+            <option value="">Select a goal</option>
+            <option value="muscle">Build Muscle</option>
+            <option value="endurance">Improve Endurance</option>
+            <option value="strength">Get Stronger</option>
+            <option value="consistency">Stay Consistent</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="workouts">WORKOUTS PER WEEK:</label>
+        <input type="number" id="workouts" name="workouts"
+               min="1" max="7" required>
+
+        <label for="deadline">TARGET DATE:</label>
+        <input type="date" id="deadline" name="deadline" required>
+
+        <label for="description">DESCRIBE YOUR GOAL:</label>
+        <text id="description" name="description"
+                  placeholder="Example: Work out 4 times per week"
+                  required></text>
+
+        <button type="submit">SET MY GOAL</button>
+
+    </form>
+</section>
+
+<!-- Weekly Progress Checklist -->
+<section class="goals-section">
+    <h2>WEEKLY PROGRESS CHECKLIST</h2>
+    <p>Check off the habits you complete this week!</p>
+
+    <div class="checklist">
+
+        <label>
+            <input type="checkbox">
+            Complete my planned workouts
+        </label>
+
+        <label>
+            <input type="checkbox">
+            Eat balanced meals
+        </label>
+
+        <label>
+            <input type="checkbox">
+            Stay hydrated
+        </label>
+
+        <label>
+            <input type="checkbox">
+            Get enough sleep
+        </label>
+
+        <label>
+            <input type="checkbox">
+            Take time to recover
+        </label>
+
+        <label>
+            <input type="checkbox">
+            Review my weekly progress
+        </label>
+
+    </div>
+</section>
+
+<!-- Motivational Section -->
+<section class="ending">
+    <h2>YOUR JOURNEY STARTS NOW</h2>
+    <p>
+        Every workout brings you one step closer
+        to your goals. Stay focused and keep improving!
+    </p>
+
+    <a href="workouts.html" class="start-button">
+        &#9654; EXPLORE WORKOUTS
+    </a>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>CONSISTENCY + NUTRITION = GAINS</p>
+
+</footer>
+
+</body>
+</html>

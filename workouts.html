@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFit | Workouts</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Press+Start+2P&display=swap');
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #15172E;
+    color: #F5F5F5;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P';
+    color: #FFD166;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+header {
+    background-color: #656ca7;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #FFD166;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a:hover {
+    color: #FFD166;
+}
+
+/* Introduction */
+.welcome {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.welcome p {
+    font-size: 22px;
+}
+
+/* Archetype Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.archetype {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+}
+
+.archetype h3 {
+    font-size: 14px;
+}
+
+.archetype p {
+    font-size: 22px;
+}
+
+.archetype:hover {
+    border-color: #EF476F;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+.select {
+    display: inline-block;
+    background-color: #EF476F;
+    border: 2px solid #FFD166;
+    padding: 10px 20px;
+}
+
+/* Workout Schedules */
+.workout {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.workout h2 {
+    font-size: 20px;
+}
+
+.workout p {
+    font-size: 22px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+th, td {
+    border: 2px solid #FFD166;
+    padding: 15px;
+    font-size: 20px;
+}
+
+th {
+    background-color: #15172E;
+    color: #FFD166;
+}
+
+.back {
+    display: inline-block;
+    background-color: #EF476F;
+    border: 2px solid #FFD166;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.back:hover {
+    background-color: #FFD166;
+    color: #15172E;
+}
+
+/* Footer */
+footer {
+    background-color: #656ca7;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Large Screens: Display archetypes in rows */
+@media (min-width: 701px) {
+    .cards {
+        flex-direction: row;
+    }
+}
+
+/* Small Screens: Stack cards and reduce spacing */
+@media (max-width: 700px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .archetype {
+        width: 100%;
+    }
+
+    .welcome {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .workout {
+        margin: 20px 10px;
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    h1, h2 {
+        font-size: 17px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
+    </style>
+</head>
+<body>
+
+<!-- Main Navigation -->
+<header id="top">
+    <h1>CAMPUSFIT</h1>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="workouts.html">WORKOUTS</a>
+        <a href="nutrition.html">NUTRITION</a>
+        <a href="recovery.html">RECOVERY</a>
+        <a href="goals.html">GOALS</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- Introduction -->
+<section class="welcome">
+    <h1>CHOOSE YOUR ARCHETYPE</h1>
+    <p>
+        What is your fitness goal?
+        Choose an archetype to find a workout routine
+        that matches what you want to achieve!
+    </p>
+</section>
+
+<!-- Archetype Selection Cards -->
+<section class="cards">
+
+    <a href="#titan" class="archetype">
+        <h3>THE TITAN</h3>
+        <p>Bigger arms, chest, and shoulders.</p>
+        <span class="select">SELECT</span>
+    </a>
+
+    <a href="#phantom" class="archetype">
+        <h3>THE PHANTOM</h3>
+        <p>Leaner physique and smaller waist.</p>
+        <span class="select">SELECT</span>
+    </a>
+
+    <a href="#juggernaut" class="archetype">
+        <h3>THE JUGGERNAUT</h3>
+        <p>Bigger legs and glutes.</p>
+        <span class="select">SELECT</span>
+    </a>
+
+    <a href="#guardian" class="archetype">
+        <h3>THE GUARDIAN</h3>
+        <p>Stronger core and stability.</p>
+        <span class="select">SELECT</span>
+    </a>
+
+    <a href="#allrounder" class="archetype">
+        <h3>THE ALL-ROUNDER</h3>
+        <p>Balanced muscle, strength, and endurance.</p>
+        <span class="select">SELECT</span>
+    </a>
+
+</section>
+
+<!-- Titan Workout -->
+<section id="titan" class="workout">
+    <h2>THE TITAN</h2>
+    <p>Focus on upper-body strength and muscle growth.</p>
+
+    <table>
+        <tr><th>DAY</th><th>WORKOUT</th></tr>
+        <tr><td>Monday</td><td>Push: Bench Press 3x8, Shoulder Press 3x10, Tricep Pushdowns 3x12</td></tr>
+        <tr><td>Tuesday</td><td>Pull: Lat Pulldown 3x10, Rows 3x10, Bicep Curls 3x12</td></tr>
+        <tr><td>Wednesday</td><td>Rest</td></tr>
+        <tr><td>Thursday</td><td>Upper Body: Incline Press 3x10, Lateral Raises 3x12, Hammer Curls 3x12</td></tr>
+        <tr><td>Friday</td><td>Legs: Squats 3x8, Romanian Deadlifts 3x10, Calf Raises 3x15</td></tr>
+        <tr><td>Saturday</td><td>Arms: Preacher Curls 3x10, Tricep Extensions 3x12, Cable Curls 2x12</td></tr>
+        <tr><td>Sunday</td><td>Rest</td></tr>
+    </table>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- Phantom Workout -->
+<section id="phantom" class="workout">
+    <h2>THE PHANTOM</h2>
+    <p>Focus on cardio and improving body composition.</p>
+
+    <table>
+        <tr><th>DAY</th><th>WORKOUT</th></tr>
+        <tr><td>Monday</td><td>Full Body: Squats 3x10, Push-ups 3x10, Rows 3x10</td></tr>
+        <tr><td>Tuesday</td><td>20-30 Minutes Cardio</td></tr>
+        <tr><td>Wednesday</td><td>Full Body: Lunges 3x10, Chest Press 3x10, Lat Pulldown 3x10</td></tr>
+        <tr><td>Thursday</td><td>Rest</td></tr>
+        <tr><td>Friday</td><td>Full Body: Deadlifts 3x8, Shoulder Press 3x10, Planks 3x30 sec</td></tr>
+        <tr><td>Saturday</td><td>30 Minutes Cardio</td></tr>
+        <tr><td>Sunday</td><td>Rest</td></tr>
+    </table>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- Juggernaut Workout -->
+<section id="juggernaut" class="workout">
+    <h2>THE JUGGERNAUT</h2>
+    <p>Focus on building bigger legs and glutes.</p>
+
+    <table>
+        <tr><th>DAY</th><th>WORKOUT</th></tr>
+        <tr><td>Monday</td><td>Quads: Squats 3x8, Leg Press 3x10, Lunges 3x10</td></tr>
+        <tr><td>Tuesday</td><td>Upper Body: Chest Press 3x10, Rows 3x10, Shoulder Press 3x10</td></tr>
+        <tr><td>Wednesday</td><td>Rest</td></tr>
+        <tr><td>Thursday</td><td>Glutes: Romanian Deadlifts 3x10, Hip Thrusts 3x10, Leg Curls 3x12</td></tr>
+        <tr><td>Friday</td><td>Rest</td></tr>
+        <tr><td>Saturday</td><td>Full Body: Goblet Squats 3x12, Lat Pulldown 3x10, Push-ups 3x10</td></tr>
+        <tr><td>Sunday</td><td>Rest</td></tr>
+    </table>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- Guardian Workout -->
+<section id="guardian" class="workout">
+    <h2>THE GUARDIAN</h2>
+    <p>Focus on core strength, balance, and stability.</p>
+
+    <table>
+        <tr><th>DAY</th><th>WORKOUT</th></tr>
+        <tr><td>Monday</td><td>Core: Planks 3x30 sec, Dead Bugs 3x10, Rows 3x10</td></tr>
+        <tr><td>Tuesday</td><td>Lower Body: Goblet Squats 3x10, Lunges 3x10, Farmer Carries 3x30 sec</td></tr>
+        <tr><td>Wednesday</td><td>Rest</td></tr>
+        <tr><td>Thursday</td><td>Core: Side Planks 3x20 sec, Bird Dogs 3x10, Pallof Press 3x12</td></tr>
+        <tr><td>Friday</td><td>Full Body: Deadlifts 3x8, Push-ups 3x10, Rows 3x10</td></tr>
+        <tr><td>Saturday</td><td>Walking or Yoga</td></tr>
+        <tr><td>Sunday</td><td>Rest</td></tr>
+    </table>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- All-Rounder Workout -->
+<section id="allrounder" class="workout">
+    <h2>THE ALL-ROUNDER</h2>
+    <p>Focus on muscle, strength, cardio, and overall fitness.</p>
+
+    <table>
+        <tr><th>DAY</th><th>WORKOUT</th></tr>
+        <tr><td>Monday</td><td>Upper Body: Bench Press 3x8, Lat Pulldown 3x10, Shoulder Press 3x10</td></tr>
+        <tr><td>Tuesday</td><td>Lower Body: Squats 3x8, Romanian Deadlifts 3x10, Lunges 3x10</td></tr>
+        <tr><td>Wednesday</td><td>Cardio + Core: 20-30 min Cardio, Planks 3x30 sec, Leg Raises 3x12</td></tr>
+        <tr><td>Thursday</td><td>Rest</td></tr>
+        <tr><td>Friday</td><td>Full Body: Deadlifts 3x8, Incline Press 3x10, Seated Rows 3x10</td></tr>
+        <tr><td>Saturday</td><td>Walking, Cycling, or Stretching</td></tr>
+        <tr><td>Sunday</td><td>Rest</td></tr>
+    </table>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>CONSISTENCY + NUTRITION = GAINS</p>
+        <p>2026 CampusFit</p>
+
+</footer>
+
+</body>
+</html>

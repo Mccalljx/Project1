@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFit | Home</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Press+Start+2P&display=swap');
+
+/* General Page Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #15172E;
+    color: #F5F5F5;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: #FFD166;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+header {
+    background-color: #656ca7;
+    border-bottom: 3px solid #FFD166;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a:hover {
+    color: #FFD166;
+}
+
+/* Welcome Section */
+.welcome {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.welcome p {
+    font-size: 22px;
+}
+
+.start-button {
+    display: inline-block;
+    background-color: #EF476F;
+    color: #15172E;
+    padding: 15px;
+    margin-top: 20px;
+    border: 3px solid #FFD166;
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+}
+
+.start-button:hover {
+    background-color: #FFD166;
+}
+
+/* Fitness Cards */
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.workouts, .diet, .recovery {
+    background-color: #656ca7;
+    border: 2px solid #FFD166;
+    padding: 20px;
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.workouts:hover, .diet:hover, .recovery:hover {
+    border-color: #EF476F;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+.cards img {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+}
+
+.cards h3 {
+    font-size: 16px;
+}
+
+.cards p {
+    font-size: 22px;
+}
+
+/* Fitness Benefits */
+.fitness-benefits {
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.benefit {
+    background-color: #656ca7;
+    border: 3px solid #EF476F;
+    padding: 25px;
+}
+
+.benefit h3 {
+    font-size: 14px;
+}
+
+.benefit p {
+    font-size: 22px;
+}
+
+/* Getting Started */
+.getting-started {
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.tips-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tip {
+    background-color: #656ca7;
+    border: 3px solid #06D6A0;
+    padding: 25px;
+    text-align: left;
+}
+
+.tip h3 {
+    font-size: 14px;
+}
+
+.tip p {
+    font-size: 22px;
+}
+
+.tip:hover {
+    border-color: #FFD166;
+    transform: translateX(5px);
+    transition: 0.3s;
+}
+
+/* Motivational Section */
+.block1 {
+    background-color: #656ca7;
+    border: 3px solid #EF476F;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.block1 p {
+    font-size: 22px;
+}
+
+/* Footer */
+footer {
+    background-color: #656ca7;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Large Screens: Display fitness cards in rows */
+@media (min-width: 701px) {
+    .cards {
+        flex-direction: row;
+    }
+}
+
+/* Small Screens: Stack cards and adjust text */
+@media (max-width: 700px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome, .block1 {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 17px;
+    }
+
+    .benefit h3, .tip h3 {
+        font-size: 12px;
+    }
+
+    .benefit p, .tip p {
+        font-size: 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
+    </style>
+</head>
+<body>
+
+<!-- Main Navigation -->
+<header>
+    <h1>CAMPUSFIT</h1>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="workouts.html">WORKOUTS</a>
+        <a href="nutrition.html">NUTRITION</a>
+        <a href="recovery.html">RECOVERY</a>
+        <a href="goals.html">GOALS</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- Welcome Section -->
+<section class="welcome">
+    <h1>WELCOME TO CAMPUSFIT</h1>
+    <p>
+        Your fitness journey starts here.
+        Complete workouts, fuel your body,
+        and level up your health.
+    </p>
+    <a href="workouts.html" class="start-button">
+        &#9654; START GAME
+    </a>
+</section>
+
+<!-- Fitness Navigation Cards -->
+<section class="cards">
+
+    <section class="workouts">
+        <a href="workouts.html">
+            <img src="Pixel Art Blue Dumbbell Sprite.png"
+                 alt="Pixel art dumbbell">
+            <h3>WORKOUT</h3>
+            <p>Explore strength training, cardio, and workout routines.</p>
+        </a>
+    </section>
+
+    <section class="diet">
+        <a href="nutrition.html">
+            <img src="Pixel Art Salad Bowl Sprite.png"
+                 alt="Pixel art salad bowl">
+            <h3>DIET</h3>
+            <p>Learn about balanced meals, protein, and healthy eating.</p>
+        </a>
+    </section>
+
+    <section class="recovery">
+        <a href="recovery.html">
+            <img src="Pixel Art Yoga Tree Pose Sprite.png"
+                 alt="Pixel art yoga pose">
+            <h3>RECOVERY</h3>
+            <p>Understand sleep, stretching, and rest days.</p>
+        </a>
+    </section>
+
+</section>
+
+<!-- Fitness Benefits -->
+<section class="fitness-benefits">
+    <h2>WHY FITNESS MATTERS</h2>
+
+    <div class="benefits-container">
+        <div class="benefit">
+            <h3>PHYSICAL HEALTH</h3>
+            <p>Regular exercise improves strength, endurance, and health.</p>
+        </div>
+
+        <div class="benefit">
+            <h3>MENTAL HEALTH</h3>
+            <p>Physical activity can help reduce stress and improve mood.</p>
+        </div>
+
+        <div class="benefit">
+            <h3>BETTER SLEEP</h3>
+            <p>Staying active can support healthier sleep habits.</p>
+        </div>
+
+        <div class="benefit">
+            <h3>BUILDING DISCIPLINE</h3>
+            <p>Workout routines help develop consistency and time management.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Getting Started Tips -->
+<section class="getting-started">
+    <h2>GETTING STARTED WITH FITNESS</h2>
+
+    <div class="tips-container">
+        <div class="tip">
+            <h3>1 SET PHYSICAL GOALS</h3>
+            <p>Decide what you want to accomplish with your fitness journey.</p>
+        </div>
+
+        <div class="tip">
+            <h3>2 CREATE A SCHEDULE</h3>
+            <p>Find time to exercise around your classes and responsibilities.</p>
+        </div>
+
+        <div class="tip">
+            <h3>3 FOCUS ON NUTRITION</h3>
+            <p>Eat balanced meals and stay hydrated throughout the day.</p>
+        </div>
+
+        <div class="tip">
+            <h3>4 STAY CONSISTENT</h3>
+            <p>Focus on long-term improvement instead of immediate results.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Motivational Section -->
+<section class="block1">
+    <h2>CONSISTENCY + NUTRITION = GAINS</h2>
+    <p>
+        Fitness isn't about being perfect.
+        It's about making progress, building healthy habits,
+        and showing up for yourself.
+    </p>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+<p>CONSISTENCY + NUTRITION = GAINS</p>
+    <p>2026 CampusFit</p>
+</footer>
+
+</body>
+</html>

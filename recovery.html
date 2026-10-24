@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFit | Recovery</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Press+Start+2P&display=swap');
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #15172E;
+    color: #F5F5F5;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P';
+    color: #FFD166;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+header {
+    background-color: #656ca7;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #FFD166;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a:hover {
+    color: #FFD166;
+}
+
+/* Introduction */
+.welcome {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Recovery Navigation Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.recovery-card {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+}
+
+
+
+.recovery-card p {
+    font-size: 22px;
+}
+
+.recovery-card:hover {
+    border-color: #EF476F;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+.select {
+    display: inline-block;
+    background-color: #EF476F;
+    border: 2px solid #FFD166;
+    padding: 10px 20px;
+}
+
+/* Recovery Information */
+.recovery-section {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.info-card {
+    background-color: #15172E;
+    border: 3px solid #06D6A0;
+    padding: 20px;
+    width: 250px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+
+/* Recovery Schedule */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+th, td {
+    border: 2px solid #FFD166;
+    padding: 15px;
+    font-size: 20px;
+}
+
+th {
+    background-color: #15172E;
+    color: #FFD166;
+}
+
+/* Recovery Tips */
+.tips {
+    background-color: #15172E;
+    border: 3px solid #EF476F;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Back Button */
+.back {
+    display: inline-block;
+    background-color: #EF476F;
+    border: 2px solid #FFD166;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+/* Ending Section */
+.ending {
+    background-color: #656ca7;
+    border: 3px solid #EF476F;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+footer {
+    background-color: #656ca7;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Large Screens */
+@media (min-width: 701px) {
+    .cards {
+        flex-direction: row;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 700px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recovery-card,
+    .info-card {
+        width: 100%;
+    }
+
+    .welcome {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .recovery-section,
+    .ending {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .recovery-section {
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    h1, h2 {
+        font-size: 17px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
+    </style>
+</head>
+<body>
+
+<!-- Main Navigation -->
+<header id="top">
+    <h1>CAMPUSFIT</h1>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="workouts.html">WORKOUTS</a>
+        <a href="nutrition.html">NUTRITION</a>
+        <a href="recovery.html">RECOVERY</a>
+        <a href="goals.html">GOALS</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- Introduction -->
+<section class="welcome">
+    <h1>REST RECOVER REPEAT</h1>
+    <p>
+        Recovery is just as important as training.
+        Learn how sleep, rest days, and healthy habits
+        help your body grow stronger.
+    </p>
+</section>
+
+<!-- Recovery Navigation Cards -->
+<section class="cards">
+
+    <a href="#sleep" class="recovery-card">
+        <h3>SLEEP</h3>
+        <p>Learn why sleep matters for muscle recovery.</p>
+        <span class="select">EXPLORE</span>
+    </a>
+
+    <a href="#rest" class="recovery-card">
+        <h3>REST DAYS</h3>
+        <p>Discover why your body needs time off.</p>
+        <span class="select">EXPLORE</span>
+    </a>
+
+    <a href="#stretching" class="recovery-card">
+        <h3>STRETCHING</h3>
+        <p>Improve flexibility and mobility.</p>
+        <span class="select">EXPLORE</span>
+    </a>
+
+    <a href="#schedule" class="recovery-card">
+        <h3>RECOVERY SCHEDULE</h3>
+        <p>Learn how to balance training and recovery.</p>
+        <span class="select">EXPLORE</span>
+    </a>
+
+</section>
+
+<!-- Sleep Information -->
+<section id="sleep" class="recovery-section">
+    <h2>THE POWER OF SLEEP</h2>
+    <p>Sleep supports muscle recovery, energy, and concentration.</p>
+
+    <div class="info-container">
+
+        <div class="info-card">
+            <h3>MUSCLE RECOVERY</h3>
+            <p>
+                Your body repairs muscle tissue during rest.
+                Getting enough sleep supports recovery.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>MORE ENERGY</h3>
+            <p>
+                Consistent sleep helps you feel more energized
+                during workouts and daily activities.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>BETTER FOCUS</h3>
+            <p>
+                Sleep supports memory, concentration,
+                and academic performance.
+            </p>
+        </div>
+
+    </div>
+
+    <p>Most adults should aim for 7-9 hours of sleep each night.</p>
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- Rest Day Benefits -->
+<section id="rest" class="recovery-section">
+    <h2>WHY REST DAYS MATTER</h2>
+
+    <div class="info-container">
+
+        <div class="info-card">
+            <h3>MANAGE FATIGUE</h3>
+            <p>
+                Rest days help manage fatigue and reduce
+                the risk of overuse injuries.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>MUSCLE GROWTH</h3>
+            <p>
+                Muscles need time to recover between
+                challenging training sessions.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>ACTIVE RECOVERY</h3>
+            <p>
+                Light activities like walking, cycling,
+                and stretching can help you stay active.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- Stretching and Mobility -->
+<section id="stretching" class="recovery-section">
+    <h2>STRETCHING AND MOBILITY</h2>
+
+    <div class="info-container">
+
+        <div class="info-card">
+            <h3>BEFORE WORKOUTS</h3>
+            <p>
+                Try dynamic movements like arm circles,
+                leg swings, and walking lunges.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>AFTER WORKOUTS</h3>
+            <p>
+                Gentle static stretches can help
+                maintain flexibility.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>REST DAYS</h3>
+            <p>
+                Try light yoga or mobility exercises
+                to maintain comfortable movement.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- Weekly Recovery Schedule -->
+<section id="schedule" class="recovery-section">
+    <h2>WEEKLY RECOVERY SCHEDULE</h2>
+    <p>Example of balancing workouts and recovery.</p>
+
+    <table>
+        <tr><th>DAY</th><th>ACTIVITY</th></tr>
+        <tr><td>Monday</td><td>Upper Body Workout</td></tr>
+        <tr><td>Tuesday</td><td>Lower Body Workout</td></tr>
+        <tr><td>Wednesday</td><td>Active Recovery: Walking or Stretching</td></tr>
+        <tr><td>Thursday</td><td>Upper Body Workout</td></tr>
+        <tr><td>Friday</td><td>Lower Body Workout</td></tr>
+        <tr><td>Saturday</td><td>Light Cardio or Yoga</td></tr>
+        <tr><td>Sunday</td><td>Rest Day</td></tr>
+    </table>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- Recovery Tips -->
+<section class="recovery-section">
+    <h2>RECOVERY TIPS</h2>
+
+    <div class="tips">
+        <p>1. Aim for 7-9 hours of sleep each night.</p>
+        <p>2. Drink water throughout the day.</p>
+        <p>3. Eat enough protein and balanced meals.</p>
+        <p>4. Include rest days in your routine.</p>
+        <p>5. Stretch regularly to improve flexibility.</p>
+        <p>6. Listen to your body and adjust when needed.</p>
+    </div>
+</section>
+
+<!-- Motivational Section -->
+<section class="ending">
+    <h2>RECOVERY IS PROGRESS</h2>
+    <p>
+        Train hard, recover properly, and stay consistent.
+        Your progress depends on both effort and rest.
+    </p>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>CONSISTENCY + NUTRITION = GAINS</p>
+        <p>2026 CampusFit</p>
+
+</footer>
+
+</body>
+</html>

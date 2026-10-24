@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFit | Nutrition</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Press+Start+2P&display=swap');
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #15172E;
+    color: #F5F5F5;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P';
+    color: #FFD166;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+header {
+    background-color: #656ca7;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #FFD166;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a:hover {
+    color: #FFD166;
+}
+
+/* Welcome Section */
+.welcome {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.welcome p {
+    font-size: 22px;
+}
+
+/* Navigation Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.nutrition-card {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+}
+
+.nutrition-card h3 {
+    font-size: 13px;
+}
+
+.nutrition-card p {
+    font-size: 22px;
+}
+
+.nutrition-card:hover {
+    border-color: #EF476F;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+.select {
+    display: inline-block;
+    background-color: #EF476F;
+    border: 2px solid #FFD166;
+    padding: 10px 20px;
+}
+
+/* Nutrition Sections */
+.nutrition-section {
+    background-color: #656ca7;
+    border: 3px solid #FFD166;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.nutrition-section h2 {
+    font-size: 20px;
+}
+
+.nutrition-section p {
+    font-size: 22px;
+}
+
+/* Information Cards */
+.info-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.info-card {
+    background-color: #15172E;
+    border: 3px solid #EF476F;
+    padding: 20px;
+    width: 250px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.info-card h3 {
+    font-size: 13px;
+}
+
+/* Nutrition Tips */
+.tips {
+    background-color: #15172E;
+    border: 3px solid #06D6A0;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Back Button */
+.back {
+    display: inline-block;
+    background-color: #EF476F;
+    border: 2px solid #FFD166;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.back:hover {
+    background-color: #FFD166;
+    color: #15172E;
+}
+
+
+footer {
+    background-color: #656ca7;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Large Screens: Arrange cards horizontally */
+@media (min-width: 701px) {
+    .cards {
+        flex-direction: row;
+    }
+}
+
+/* Small Screens: Stack cards and reduce text size */
+@media (max-width: 700px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nutrition-card,
+    .info-card {
+        width: 100%;
+    }
+
+    .welcome {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .nutrition-section,
+    .ending {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 17px;
+    }
+
+    .nutrition-section h2 {
+        font-size: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
+    </style>
+</head>
+<body>
+
+<!-- Main Navigation -->
+<header id="top">
+    <h1>CAMPUSFIT</h1>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="workouts.html">WORKOUTS</a>
+        <a href="nutrition.html">NUTRITION</a>
+        <a href="recovery.html">RECOVERY</a>
+        <a href="goals.html">GOALS</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- Welcome Section -->
+<section class="welcome">
+    <h1>FUEL YOUR BODY</h1>
+    <p>
+        Nutrition plays an important role in your fitness journey.
+        Learn how to eat better, build muscle, and stay energized!
+    </p>
+</section>
+
+<!-- Nutrition Navigation Cards -->
+<section class="cards">
+
+    <a href="#macros" class="nutrition-card">
+        <h3>MACRONUTRIENTS</h3>
+        <p>Learn about protein, carbohydrates, and fats.</p>
+        <span class="select">EXPLORE</span>
+    </a>
+
+    <a href="#nutrition-goals" class="nutrition-card">
+        <h3>FITNESS GOALS</h3>
+        <p>Learn how to eat for different fitness goals.</p>
+        <span class="select">EXPLORE</span>
+    </a>
+
+    <a href="#meals" class="nutrition-card">
+        <h3>COLLEGE MEALS</h3>
+        <p>Find simple and affordable meal ideas.</p>
+        <span class="select">EXPLORE</span>
+    </a>
+
+    <a href="#tips" class="nutrition-card">
+        <h3>NUTRITION TIPS</h3>
+        <p>Build healthy eating habits.</p>
+        <span class="select">EXPLORE</span>
+    </a>
+
+</section>
+
+<!-- Macronutrients -->
+<section id="macros" class="nutrition-section">
+    <h2>UNDERSTANDING MACROS</h2>
+    <p>Macronutrients provide energy and support your body's functions.</p>
+
+    <div class="info-container">
+
+        <div class="info-card">
+            <h3>PROTEIN</h3>
+            <p>Protein helps build and repair muscles.</p>
+            <p>Foods: Chicken, eggs, fish, Greek yogurt, beans, and tofu.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>CARBOHYDRATES</h3>
+            <p>Carbohydrates provide energy for workouts.</p>
+            <p>Foods: Rice, oatmeal, potatoes, pasta, and fruit.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>HEALTHY FATS</h3>
+            <p>Fats support hormone production and overall health.</p>
+            <p>Foods: Avocados, nuts, olive oil, seeds, and salmon.</p>
+        </div>
+
+    </div>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- Eating for Fitness Goals -->
+<section id="nutrition-goals" class="nutrition-section">
+    <h2>EATING FOR YOUR GOAL</h2>
+
+    <div class="info-container">
+
+        <div class="info-card">
+            <h3>BUILD MUSCLE</h3>
+            <p>
+                Eat enough calories and protein to support
+                muscle growth and recovery.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>GET LEANER</h3>
+            <p>
+                Focus on nutritious meals and regular exercise.
+                A modest calorie deficit may support gradual fat loss.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>MAINTAIN FITNESS</h3>
+            <p>
+                Eat balanced meals with protein, carbohydrates,
+                healthy fats, fruits, and vegetables.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- College Meal Ideas -->
+<section id="meals" class="nutrition-section">
+    <h2>COLLEGE MEAL IDEAS</h2>
+    <p>Eating healthy does not have to be expensive or complicated.</p>
+
+    <div class="info-container">
+
+        <div class="info-card">
+            <h3>BREAKFAST</h3>
+            <p>Oatmeal with peanut butter and a banana.</p>
+            <p>Greek yogurt with fruit.</p>
+            <p>Eggs with whole-grain toast.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>LUNCH</h3>
+            <p>Chicken, rice, and vegetables.</p>
+            <p>Turkey sandwich with fruit.</p>
+            <p>Bean and rice burrito bowl.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>DINNER</h3>
+            <p>Salmon with potatoes and broccoli.</p>
+            <p>Chicken pasta with vegetables.</p>
+            <p>Tofu stir-fry with rice.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>SNACKS</h3>
+            <p>Greek yogurt.</p>
+            <p>Trail mix or nuts.</p>
+            <p>Fruit with peanut butter.</p>
+        </div>
+
+    </div>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+<!-- Healthy Eating Tips -->
+<section id="tips" class="nutrition-section">
+    <h2>HEALTHY EATING TIPS</h2>
+
+    <div class="tips">
+        <p>1. Drink water regularly throughout the day.</p>
+        <p>2. Include protein in your meals.</p>
+        <p>3. Eat fruits and vegetables daily.</p>
+        <p>4. Prepare meals ahead of time.</p>
+        <p>5. Choose affordable foods like oats, eggs, beans, and rice.</p>
+        <p>6. Eat enough to support your activity and recovery.</p>
+    </div>
+
+    <a href="#top" class="back">BACK TO TOP</a>
+</section>
+
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>CONSISTENCY + NUTRITION = GAINS</p>
+        <p>2026 CampusFit</p>
+
+</footer>
+
+</body>
+</html>
